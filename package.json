@@ -1,0 +1,15 @@
+{
+  "name": "online-learning-platform",
+  "version": "1.0.0",
+  "description": "Full-stack online learning platform",
+  "scripts": {
+  "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+  "server:dev": "cd server && npm run dev",
+  "client:dev": "cd client && npm run dev",
+  "build": "npm install --prefix client --legacy-peer-deps --include=dev && npm install --prefix server && npm run build --prefix client",
+  "start": "cd server && npm start"
+},
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
