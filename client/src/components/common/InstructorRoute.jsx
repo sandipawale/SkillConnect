@@ -4,7 +4,6 @@ import { toast } from 'react-hot-toast';
 
 const InstructorRoute = () => {
   const { userInfo } = useSelector((state) => state.auth);
-
   if (userInfo && (userInfo.role === 'instructor' || userInfo.role === 'admin')) {
     return <Outlet />;
   } else if (userInfo) {

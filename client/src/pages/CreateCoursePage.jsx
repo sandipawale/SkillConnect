@@ -110,5 +110,4 @@ const CreateCoursePage = () => {
     </div>
   );
 };
-
 export default CreateCoursePage;

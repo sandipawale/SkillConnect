@@ -7,7 +7,6 @@ const GradeSubmissionModal = ({ submission, onClose }) => {
   const [feedback, setFeedback] = useState('');
 
   const [gradeSubmission, { isLoading }] = useGradeSubmissionMutation();
-
   useEffect(() => {
     if (submission) {
       setGrade(submission.grade || '');

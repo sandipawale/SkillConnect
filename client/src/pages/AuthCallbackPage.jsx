@@ -13,7 +13,6 @@ const AuthCallbackPage = () => {
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const token = params.get('token');
-
     if (token) {
       const decodedUser = jwtDecode(token);
       const userInfo = { ...decodedUser, token };

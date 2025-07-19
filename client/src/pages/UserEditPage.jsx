@@ -15,7 +15,6 @@ const UserEditPage = () => {
 
   const { data: user, isLoading, error, refetch } = useGetUserByIdQuery(userId);
   const [updateUser, { isLoading: isLoadingUpdate }] = useUpdateUserMutation();
-
   useEffect(() => {
     if (user) {
       setName(user.name);

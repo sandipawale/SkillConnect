@@ -19,7 +19,7 @@ const InstructorCourseTable = ({ instructorName, courses, deleteHandler, isLoadi
             <th className="py-3 px-6 text-left">Category</th>
             <th className="py-3 px-6 text-center">Status</th>
             <th className="py-3 px-6 text-center">Actions</th>
-          </tr>
+          </tr> 
         </thead>
         <tbody className="text-gray-600 text-sm font-light">
           {courses.map((course) => (

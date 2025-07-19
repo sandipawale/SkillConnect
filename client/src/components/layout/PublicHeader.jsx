@@ -33,6 +33,5 @@ const PublicHeader = () => {
     </header>
   );
 };
-
 // Export the PublicHeader component as default
 export default PublicHeader;

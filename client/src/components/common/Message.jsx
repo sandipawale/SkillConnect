@@ -14,7 +14,6 @@ const Message = ({ variant = 'info', children }) => {
         return 'bg-blue-100 border-blue-400 text-blue-700';
     }
   };
-
   return (
     <div className={`border px-4 py-3 rounded relative ${getVariantClass()}`} role="alert">
       {children}

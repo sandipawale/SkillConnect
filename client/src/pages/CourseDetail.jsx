@@ -19,7 +19,6 @@ const CourseDetailPage = () => {
   const [unenroll, { isLoading: isUnenrolling }] = useUnenrollMutation();
 
   const course = courseData?.data;
-
   // --- THIS IS THE GUARANTEED FIX ---
   // We add checks to ensure data exists before trying to use it.
   const isAlreadyEnrolled = myEnrollmentsData?.data

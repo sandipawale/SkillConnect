@@ -6,7 +6,6 @@ const ViewSubmissionsModal = ({ assignment, onGrade, onClose }) => {
   const { data: submissionsData, isLoading, error } = useGetSubmissionsForAssignmentQuery(assignment?._id, {
     skip: !assignment, // Don't run the query if there's no assignment
   });
-
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-4">
       <div className="bg-white rounded-lg shadow-2xl w-full max-w-3xl flex flex-col max-h-[90vh]">

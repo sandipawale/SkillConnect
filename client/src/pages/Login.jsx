@@ -13,7 +13,6 @@ const LoginPage = () => {
   const [login, { isLoading }] = useLoginMutation();
   const { userInfo } = useSelector((state) => state.auth);
   const [searchParams] = useSearchParams();
-
   useEffect(() => {
     // Show error toast from Google redirect
     const error = searchParams.get('error');

@@ -7,7 +7,7 @@ const AdminRoute = () => {
   const { userInfo } = useSelector((state) => state.auth);
   const [redirect, setRedirect] = useState(false);
 
-  // --- THIS IS THE DEFINITIVE FIX ---
+  //  THIS IS THE DEFINITIVE FIX 
   // We use a useEffect hook to manage the redirect side-effect.
   useEffect(() => {
     // This effect runs only if the user is logged in but is NOT an admin.

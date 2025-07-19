@@ -65,7 +65,6 @@ const DashboardLayout = () => {
       <aside className={`fixed inset-y-0 left-0 bg-primary-dark text-white w-64 transform ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:relative md:translate-x-0 transition-transform duration-200 ease-in-out z-30 flex flex-col`}>
         {sidebarContent}
       </aside>
-
       {/* Main Content */}
       <div className="flex-1 flex flex-col">
         <header className="bg-primary-dark shadow-sm h-16 flex justify-between items-center px-6 flex-shrink-0">

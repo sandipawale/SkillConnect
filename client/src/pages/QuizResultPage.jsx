@@ -22,7 +22,6 @@ const QuizResultPage = () => {
       <div className="bg-white/90 backdrop-blur-sm p-10 rounded-lg shadow-xl max-w-2xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-2">Quiz Complete!</h1>
           <p className="text-lg text-gray-600 mb-6">Results for: <span className="font-semibold">{attempt.quiz.title}</span></p>
-
           <div className="my-8">
               {passed ? (
                 <div className="text-green-500">

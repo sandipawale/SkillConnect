@@ -13,7 +13,6 @@ const AssignmentPage = () => {
   
   const { quill, quillRef } = useQuill();
   const [submissionContent, setSubmissionContent] = useState('');
-
   const { data: assignmentData, isLoading: isLoadingAssignment } = useGetAssignmentByIdQuery(assignmentId);
   const { data: submissionData, isLoading: isLoadingSubmission, refetch } = useGetMySubmissionQuery(assignmentId, { skip: !assignmentId });
   const [submitAssignment, { isLoading: isSubmitting }] = useSubmitAssignmentMutation();
