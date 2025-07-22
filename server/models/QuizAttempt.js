@@ -18,7 +18,7 @@ const QuizAttemptSchema = new mongoose.Schema({
         ref: 'Question',
         required: true,
       },
-      selectedOption: { // The index of the selected option
+      selectedOption: { // The index of the selected options
         type: Number,
         required: true,
       },

@@ -14,7 +14,6 @@ export const getQuizForLesson = asyncHandler(async (req, res) => {
   if (quiz) {
     res.status(200).json({ success: true, data: quiz });
   } else {
-    // Instead of a 404 error, send a 200 with null data.
     res.status(200).json({ success: true, data: null });
   }
 });

@@ -16,7 +16,7 @@ const QuizSchema = new mongoose.Schema({
     type: String,
     trim: true,
   },
-  // We will populate this field virtually from the Question model
+  // We will populate this field virtually from the Question models
 }, {
   timestamps: true,
   toJSON: { virtuals: true },

@@ -15,7 +15,7 @@ export const addQuestion = asyncHandler(async (req, res) => {
   res.status(201).json({ success: true, data: question });
 });
 
-// @desc    Update a question
+// @desc    Update a questio
 // @route   PUT /api/questions/:id
 export const updateQuestion = asyncHandler(async (req, res) => {
   let question = await Question.findById(req.params.id);
@@ -30,7 +30,7 @@ export const updateQuestion = asyncHandler(async (req, res) => {
   res.status(200).json({ success: true, data: question });
 });
 
-// @desc    Delete a question
+// @desc   Delete a question
 // @route   DELETE /api/questions/:id
 export const deleteQuestion = asyncHandler(async (req, res) => {
   const question = await Question.findById(req.params.id);
