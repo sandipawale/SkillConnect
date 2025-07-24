@@ -8,7 +8,7 @@ export const assignmentApiSlice = apiSlice.injectEndpoints({
       query: (lessonId) => `${ASSIGNMENTS_URL}/lesson/${lessonId}`,
       providesTags: (result, error, id) => [{ type: 'Assignment', id }],
     }),
-    getAssignmentById: builder.query({ // Add the new query
+    getAssignmentById: builder.query({ // Add the newquery
       query: (assignmentId) => `${ASSIGNMENTS_URL}/${assignmentId}`,
       providesTags: (result, error, id) => [{ type: 'Assignment', id }],
     }),

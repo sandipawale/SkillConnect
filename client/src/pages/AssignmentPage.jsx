@@ -5,7 +5,7 @@ import { useGetAssignmentByIdQuery, useGetMySubmissionQuery, useSubmitAssignment
 import Loader from '../components/common/Loader';
 import Message from '../components/common/Message';
 
-// The CSS is now loaded in index.html, so we only need the JS hook
+// The CSS is now loaded in index.html, so we only need the JS hooks
 import { useQuill } from 'react-quilljs';
 
 const AssignmentPage = () => {
