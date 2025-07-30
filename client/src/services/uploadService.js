@@ -10,7 +10,7 @@ export const uploadApiSlice = apiSlice.injectEndpoints({
         method: 'POST',
         body: formData,
         // Let the browser set the Content-Type to multipart/form-data
-        // by not specifying it here.
+        // by not specifying it here
       }),
     }),
   }),

@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const baseQueryWithAuth = fetchBaseQuery({
-  // Use the production base URL from the environment variable
+  // Use the production base URL from the environment variabl
   baseUrl: import.meta.env.VITE_API_BASE_URL,
   prepareHeaders: (headers, { getState }) => {
     const token = getState().auth.userInfo?.token;

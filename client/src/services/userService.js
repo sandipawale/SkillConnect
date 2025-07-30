@@ -13,7 +13,7 @@ export const userApiSlice = apiSlice.injectEndpoints({
       }),
     }),
     
-    // --- ADMIN QUERIES AND MUTATIONS ---
+    // --- ADMIN QUERIES AND MUTATIONS --
 
     // Query for an admin to get all users
     getUsers: builder.query({
