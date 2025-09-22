@@ -54,8 +54,8 @@ const app = express();
 // --- THIS IS THE GUARANTEED FIX: CORS Configuration for Production ---
 // We create a whitelist of allowed origins.
 const whitelist = [
-  'http://localhost:5173', // For local development
-  'https://learnify-three-black.vercel.app' // Your live Vercel frontend
+  'http://localhost:5173',
+  'https://skill-connect-gamma.vercel.app' 
 ];
 
 const corsOptions = {
