@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const DashboardPage = () => {
   const { data, isLoading, error } = useGetMyEnrollmentsQuery();
 
-  // --- THIS IS THE FIX ---
+  // --- THIS IS THE FIX --
   // Filter out any enrollments where the course might have been deleted or is null
   const validEnrollments = data?.data?.filter(enrollment => enrollment.course);
   // --- END OF FIX ---
