@@ -49,12 +49,11 @@ console.log('✅ CLOUDINARY:', {
 
 configurePassport(passport);
 connectDB();
-const app = express();
-app.set('trust proxy', 1);
 
+const app = express();
+app.set('trust proxy', 1); // MUST be first
 
 // --- THIS IS THE GUARANTEED FIX: CORS Configuration for Production ---
-// We create a whitelist of allowed origins.
 const whitelist = [
   'http://localhost:5173',
   'https://skill-connect-gamma.vercel.app' 
@@ -62,8 +61,6 @@ const whitelist = [
 
 const corsOptions = {
   origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl requests)
-    // or if the origin is in our whitelist.
     if (!origin || whitelist.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
@@ -83,6 +80,14 @@ if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 
+// Rate limiter should come **before routes and after trust proxy**
+const limiter = rateLimit({
+  windowMs: 10 * 60 * 1000,
+  max: 200,
+});
+app.use('/api', limiter);
+
+// Passport initialization should come **after rate limiter**
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
@@ -91,11 +96,6 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-const limiter = rateLimit({
-  windowMs: 10 * 60 * 1000,
-  max: 200, // Increased limit slightly
-});
-app.use('/api', limiter);
 
 // Mount API routers
 app.use('/api/auth', authRoutes);
