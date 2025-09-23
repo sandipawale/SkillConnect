@@ -50,6 +50,8 @@ console.log('✅ CLOUDINARY:', {
 configurePassport(passport);
 connectDB();
 const app = express();
+app.set('trust proxy', 1);
+
 
 // --- THIS IS THE GUARANTEED FIX: CORS Configuration for Production ---
 // We create a whitelist of allowed origins.
