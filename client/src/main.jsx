@@ -15,6 +15,7 @@ import PublicLayout from './components/layout/PublicLayout.jsx';
 
 import RootRedirect from './pages/RootRedirect.jsx';
 import LoginPage from './pages/Login.jsx';
+import Privacy from './pages/Privacy.jsx';
 import RegisterPage from './pages/Register.jsx';
 import CoursesPage from './pages/Courses.jsx';
 import CourseDetailPage from './pages/CourseDetail.jsx';
@@ -40,6 +41,7 @@ const router = createBrowserRouter(createRoutesFromElements(
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/auth/callback" element={<AuthCallbackPage />} />
+       <Route path="/privacy" element={<Privacy />} />
     </Route>
     <Route path="" element={<PrivateRoute />}>
       <Route element={<DashboardLayout />}>
